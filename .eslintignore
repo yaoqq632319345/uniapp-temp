@@ -1,0 +1,21 @@
+*.svg
+*.woff
+*.ttf
+*.css
+index.html
+.husky
+package.json
+node_modules
+.vscode
+.idea
+dist
+build
+/public
+/docs
+.local
+/bin
+Dockerfile
+
+# auto-import
+auto-imports.d.ts
+components.d.ts
