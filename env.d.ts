@@ -12,5 +12,5 @@ interface ImportMetaEnv {
    * @type {string}
    * @memberof ImportMetaEnv
    */
-  readonly VITE_REQUEST_BASE_URL: string;
+  readonly VITE_REQESTURL: string;
 }

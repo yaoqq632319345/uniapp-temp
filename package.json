@@ -11,7 +11,11 @@
     "dev:h5": "uni",
     "dev:wx": "uni -p mp-weixin",
     "build:h5": "uni build",
-    "build:wx": "uni build -p mp-weixin"
+    "build:h5-test": "uni build --mode test",
+    "build:wx": "uni build -p mp-weixin",
+    "build:wx-test": "uni build -p mp-weixin --mode test",
+    "buildAndUpload": "npm run build:wx-test && node upload/autoUpload.js",
+    "buildAndUpload:production": "npm run build:wx && export NODE_ENV=production && node upload/autoUpload.js"
   },
   "config": {
     "commitizen": {
@@ -77,6 +81,7 @@
     "stylelint-scss": "^4.3.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-style-import": "^2.0.0",
+    "miniprogram-ci": "^1.8.35",
     "vite-plugin-stylelint": "^4.1.5",
     "lint-staged": "^10.5.4",
     "husky": "^8.0.3",
