@@ -3,8 +3,14 @@ const ci = require('miniprogram-ci');
 const path = require('path');
 const mainfest = require('../src/manifest.json');
 const { 'mp-weixin': weixin, versionName } = mainfest;
-const appid = weixin.appid;
-const isProduction = !!process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV;
+const isProduction = NODE_ENV === 'production';
+
+require('dotenv').config({
+  path: path.resolve(process.cwd(), `.env.${NODE_ENV}`)
+});
+const appid = process.env.VITE_APPID;
+console.log(appid);
 
 try {
   console.log(`=================开始上传=================`);
